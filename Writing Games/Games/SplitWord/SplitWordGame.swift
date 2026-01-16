@@ -9,17 +9,42 @@ import SwiftUI
 
 struct SplitWordGame: View {
     @State var word = GamesGlobalVariables.vocabMap.shuffled().first
+    @State var chosenWords: [String] = []
     var action: () -> Void
     
     var body: some View {
         VStack {
-            VocabQuestion(word: word?.key ?? "", definition: word?.value ?? "", options: fakeWords, nextCard: {
-                word = GamesGlobalVariables.vocabMap.shuffled().first
-                fakeWords = GamesGlobalVariables.vocabMap.shuffled().prefix(3).compactMap { $0.value }
-            })
+            Spacer()
+            Text(word?.1 ?? "")
+            Spacer()
+            ForEach(chosenWords, id: \.self) { w in
+                Text(w)
+                    .clipShape(Capsule())
+            }
+            Spacer()
+            ForEach(splitIntoThreeCharacterStrings(word?.0 ?? ""), id: \.self) { word in
+                Text(word)
+                    .clipShape(Capsule())
+                    .onTapGesture {
+                        chosenWords.append(word)
+                    }
+            }
             Spacer()
             StretchedButton(text: "Done", action: action)
         }
         .padding()
+    }
+    
+    func splitIntoThreeCharacterStrings(_ word: String) -> [String] {
+        var result: [String] = []
+        var currentIndex = word.startIndex
+
+        while currentIndex < word.endIndex {
+            let nextIndex = word.index(currentIndex, offsetBy: 3, limitedBy: word.endIndex) ?? word.endIndex
+            result.append(String(word[currentIndex..<nextIndex]))
+            currentIndex = nextIndex
+        }
+
+        return result
     }
 }
