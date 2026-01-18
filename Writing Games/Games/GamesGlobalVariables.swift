@@ -22,6 +22,222 @@ struct GamesGlobalVariables {
         "happy"
     ]
     
+    static var excerts = [
+                          """
+                          “It’s ok,” my words tremble. “I’ve called for help.” I can’t do this. Her eyes are wide. A deafening pulse races in my ears. I can’t do this. I can’t do this. “It’s ok.”
+                          It’s not ok. She’s not ok. And I don’t do crises. A croak escapes her parched lips.
+                          “What?” I lean forward.
+                          Sirens wail. Her voice whispers. “Will I…”
+                          “What?” The questions tinge with urgent fear. Don’t die. Please, don’t die.
+                          A slim tongue wets dry lips. Glassy eyes widen. A strangled breath. “Don’t let me die. P-please.”
+                          Words choke me. Salty tears drip across my cheeks. I suck in cold air, a response caught somewhere in my throat. Her face is earnest. Open. Pale. Waiting. Hoping. Begging.
+                          “You’ll… they’re coming… You’re…” Something pushes at my shoulder. Her mouth goes slack. The tension slips from her face. Flashes of red and blue flick across her glassy eyes.
+                          No. No, I’m standing. Fingers are tugging at my jumper. Instructions are barked in my ear. When did I move? When did they arrive?
+                          Dead. She’s dead.
+                          I watched her die.
+                          """: "the killer",
+                          """
+                          The incandescent glow of the street lamps keeps the hungry night at bay. The pavement is barren. Blanketed by fear’s intoxicating chill. My heart hammers. Something is about to happen. Something bad. A sickening wave of panic crashes through me. Dizzying terror climbs up my spine.
+                          Someone else should be here.
+                          The realisation hits me. I shouldn’t be alone.
+                          I spin, boots scraping unyielding cement. The pavement is distorted. Wrong. The library lustre paints the darkness. Windows catch tilting reflections. I dance on glassy panes. Pale. Broken. Alone. Brick walls hide in shadow.
+                          There’s a cement building in front. I’ve been here before. I’m missing something… I need something… There. That window. I need that window. Why? My vision narrows.
+                          I know what’s going to happen.
+                          I’ve seen this before.
+                          I am powerless to stop it.
+                          The window explodes. A rain of glass falls around a dark shape within. My heart hammers. The body plummets. Cream gilet. A cascade of blonde curls ballooning around a pale face.
+                          “No!” The scream rips from my mouth. I charge across the road, a cacophony of frantic limbs and shallow breaths. “Please, no!” My throat is raw, But I know I'm powerless to stop her death.
+                          """: "the victim",
+                          """
+                          Heather spreads out a rug, patched in red and white. She pulls out strawberries and cakes and crisps and bread sticks and layers them across the soft wool.
+                          Russell stops short. “You… made a picnic?”
+                          Heather lifts one shoulder in a shrug, cherry lip pinched between her teeth. “I wanted to rival your last date.”
+                          He breathes a laugh. Their last date had been in the students union cinema. They’d seen Brother Bear, Heather’s favourite film, thanks to Mark who was on the committee of students who chose the films. He’d brought the tickets and she’d gasped when the title had been splashed across the big screen. It had taken him quite a bit of planning.
+                          “I’m glad you enjoyed it.” He slides onto the rug next to her. She’s even made fairy cakes, with sugared hearts on top.
+                          “I can’t believe you remembered my favourite film.” She leans her head against his shoulder. Her shampoo is scented like apples, strands of her golden hair flicking across his jaw.
+                          “I was quite surprised.” The night she’d told him had involved several pints, two massive burgers and a very poor attempt at darts. She’d come back to his room in halls and they spoke into the small hours, curled together and trading tidbits and dreams until they fell asleep.
+                          She scoots closer to him on the blanket and curls into his side. It’s like she was made to fit there. “Do you like it?”
+                          “I love it,” he says.
+                          """: "Heather",
+                          """
+                          The grass had shrunk to withered husks, the weeds brittle and brown. The world was curling in the summer heat, crunching beneath my trainers. The flower stems were clammy in my palms. Nat hugged her elbows, as if she were cold, her legs crossed at the ankles, her bottom lip caught between her teeth. The grave. A tree nearby. The lumpy stone church.
+                          I didn’t cry. I was done crying.
+                          I bent to the grass, bare knees scraping dry earth, and dropped the flowers to the still stone. I should say something. Sorry? I wish I had been better? You shouldn’t be here? Nothing felt right.
+                          I tugged my shorts down my thighs and squinted at the name etched into stone. Nat wove her fingers through mine, sweaty palm to sweaty palm. I won’t cry, I told my misted eyes and pressed my parched lips together. Tears don’t bring back the dead.
+                          “She shouldn’t have died.” Nat said.
+                          I nodded. Blinked. The words stuck to my throat, the impossibilities and the truth.
+                          Her clammy fingers squeezed mine. I don’t know how long we stood. How long it took me to say goodbye.
+                          """: "the girl's ghost",
+                          """
+                          “I’m so sorry.” Sarah raises the gun. “I’m so sorry. But I have to. Don’t you see? I’m in so deep. And it’s unravelling. It will lead to me. Sooner or later. I’m going to prison.”
+                          “No. Please.” Tiffy can barely breathe. Not with the gun pressed to her head.
+                          “I have to. I have to. I’m going to prison, don’t you get that?” Sarah licks her lips. “But I have a daughter. You like her. You’re friends. Doesn’t she deserve this? All of it?”
+                          “I don’t know your daughter--”
+                          “You do.” Sarah steps closer. “You do. You love her. She’s amazing. She can take your place. Have your future.”
+                          “No.” Tiffy steps away, but there is the wall. Cold plaster.
+                          “I’m sorry. I’m really sorry.”
+                          """: "the daughter",
+                          """
+                          In no other country could it rain this much.
+                          Rain is thrust against the windscreen. A torrent runs like a river down the smooth glass. The windscreen wipers work in a pointless frenzy. I sit in the front seat, hands gripping soft cotton, heart thumping as loud as the pounding winds outside.
+                          I refuse to meet my untimely end in a car crash minutes before saving my sister. I’ve survived so much. Nat’s knuckles are blanched white where she grips the steering wheel. She’s leaning forward, head tilted close to the glass. The car fans wage war against our soggy breaths, mingling in the metal prison.
+                          """: "the sister",
+                          """
+                          With each turn they take away from campus Jessica becomes herself again. She takes off the heavy black wig and folds it in her bag. Will she ever need it again? She untucks her brown curls from the tight bun and smooths out the creases. She loses the denim jacket, too. Pulls on a thick hoodie and drops the ridiculous sunglasses into her bag, next to her school planner.
+                          Don’t leave anything in the car. That’s rule number one.
+                          Jessica pulls out her phone and finds a message from Cherry on WhatsApp. Are we still doing movies tonight, while your mum is away? I’m on my way over.
+                          Jessica taps out a quick reply. Yeah. See you soon.
+                          She drops the phone into her bag. Rule number two. Always have an alibi.
+                          “Mum--” Jessica chokes back a sob. Where is this sentence going?
+                          “It’s ok.” Her mum always sounds like this. Warm and strong. Full. Confident.
+                          Rule number three: never question the boss.
+                          """: "Cherry",
+                          """
+                            “I’m dropping out." The conversation catches me off guard. Paula’s face is flipped towards the ceiling, her words thick with emotion.
+                            “Why?” I struggle to find my voice. I am hollowed to my core.
+                            She blinks at me, sitting up. “I want to be closer to my mum. In case she wakes up. I want to be near the hospital.”
+                            I press my lips together. She’s giving up on university. The social life she loves. The clubs and packed student bars. Her mother wouldn’t have wanted that.
+                            Paula shakes her head. “I need to get out of here. Sorry.”
+                         """: "Paula",
+                            """
+                            Rick’s night started out ok. He’d been in a pub, surrounded by the scent of beer and the trickling beat of some nineties pop tunes. The girl he’d met online had been fine. Kind. Pretty. They’d left well before it was closing, him having nursed a pint and a salad, her having eaten a burger.
+                            “Do you mind?” She pulls a pack of cigarettes from her leather purse. He nods, because what else would he say. She offers him one but he declines.
+                            The smell of smoke fills the air, at odds with the trickling scent of her perfume. It billows between her painted lips. He says nothing. He jams his hands in his pockets and continues their small talk.
+                            He didn’t like the woman, even before she pulled out the cigarette. In truth, he hadn’t come here to find the girl of his dreams, more to check that she wasn’t her.  She’s better than his last online date though. The last girl had left her wallet at home and insisted he pay. Like pHd students are loaded, or something. The man before that suggested skipping dinner altogether and just meeting at his place. Rick was pretty sure that was just a hookup.
+                            This woman had been pleasant enough. Talkative. Interesting. She just isn’t the right person. They wait at the bus stop together, her smoking, him freezing. She turns to him, a playful smile pulled on her round face. “Do you want to come back to my place?”
+                            """: "the woman",
+                            """
+                           The world is dressed in grey. Water runs in rivulets down the sodden pavement, an icy chill splashing around my ankles and proving once and for all these cheap boots are not as waterproof as advertised. I turn my ID pass in my pocket. Rain tangles in my thick curls, its wandering fingers creeping down my neck, tracing lines between denim jacket and bare skin.
+                           “Hey,” Lucy waits outside building 35, hunched beneath a parapet, fingers stuffed in her pockets and backpack loose on her shoulders.
+                           “How is it pouring and you still look flawless?” I fold my sodden arms across my chest.
+                           “They’ve this fabulous new invention. It’s called the umbrella. You should try it.” She winks. “Ready?”
+                           Not even close.
+                           """: "Lucy",
+                            """
+                            Celia Brown doesn’t steal for murderers unless she’s desperate.
+                            At least, that’s what she tells herself. Desperate, right? Mouths to feed (well, hers and maybe her ungrateful boyfriend who is out sofa surfing while waiting on his band’s big break). And besides, who said it would be used for murder? It’s probably an heirloom or something. An old treasure.
+                            Celia wedges the pin into the lock and bends close. Despite the ski mask and baggy black clothing, goosebumps prick her skin and winter’s chill strokes the back of her neck. Urg, why does no one hire her for these big jobs in the country in Spring? Or summer? No, not summer. She’s done the ski mask thing in summer before. Never again. The lock clicks and the door swings wide.
+                            """: "the homeowner",
+                            """
+                            My shins are caked in mud, the mouthguard is gummy on my incisors, my hair is matted with rain and I am really starting to hate being a detective. I fold my damp arms across my chest and juggle the awkward, wooden stick in my slick palm. My phone pings at me, but I’m way too soggy to answer.
+                            “Get ready!” It’s the other defender, across the field. She’s all peppy and bouncy on her feet, two hands on the stick, pony tail flicking rainwater across the astro. She ducks in and charges for the white ball I’m told is near lethal.
+                            Oh great. This again. I lower my stick to the ground and crouch over it in the vague impression I might be about to do something. Icy droplets slip down my sodden shirt and onto my neck. Grim.
+                            “Game on!”
+                            """: "the other defender",
+                            """
+                            “You’re going to keep it?” The stifling summer was stolen by autumn’s chill. Lush green scrunched to rust orange. Wet dew hardened to icy frost. “Do you know how to look after a child?” May’s voice is sharp, each question a jab at Sarah’s tender resolve. Impossible to acknowledge. Dangerous to consider.
+                            Withered grass and rotting flowers are scattered around the pair. The cool greeting of the metal bench seeps into her snug jeans. When did the world start to decay?
+                            “How’s uni?” Sarah’s voice is alien. Unused. Brittle.
+                            “It’s not all that really.” May shifts. Sarah’s eyes find a bird, perched on a holly leaf, picking at the spikes. May doesn’t understand, but Sarah needs direction. A future. A plan.
+                            The bird throws itself into the sky.
+                            """: "May",
+                            """
+                            “Have you spoken to Daniel?”
+                            “Yeah.” The lie sits sour between them. Sarah’s face tilts to the darkening sky. May presses her lips together.
+                            Daniel, the mysterious stranger. Daniel, who liked linguine and gateau. Daniel who is long gone. Sarah didn’t know him, that winter’s night, and she doesn’t know him now.
+                            “Have you chosen a name?” This is the first question that pulls happiness to Sarah’s gut.
+                            “Yeah, I have. Jessica if it’s a girl. Malcolm if it’s a boy.” She hopes it’s a girl. She wants a girl. Another female addition to her and her mum’s household. “We’re making a nursery too.”
+                            “With a cot?”
+                            “Yeah, and toys. We’re saving up to replace the carpets.” The nursery is Sarah’s old room. She’ll be sleeping there with the baby, when it comes. Uncurling joy touches a smile to Sarah’s chapped lips.
+                            """: "Daniel",
+                            """
+                            “The gateau is my favourite.” She slides closer, eyes drifting across the room. May, the other waitress, a peppy sixth former saving up for university, is eyeing them from across the room. She gives Sarah a wink and floats between the remaining tables. There’s no sign of the manager.
+                            “Mine too,” he meets her gaze beneath dark lashes. Her heart flutters.
+                            “The linguine is tonight’s special.” Is she flirting, or blabbering? Sarah has never been smooth. She twists her face into what she hopes is a coy smile.
+                            “I’ll get that then.” He gives back the menu, gaze still lingering on her lips.
+                            “Anything else?”
+                            “How about the gateau, two spoons?” Cheeky. She breathes a laugh and slides the menu back into its holder.
+                            “I’ll get the order to the chef.”
+                            """: "the man",
+                            """
+                            Sarah slaps mucky water across the chipped wooden table and drags the rag over smudged beer rings. A job at the hotel restaurant had seemed great, when she was sixteen and needed the money. It’s feeling a lot less glamorous at twenty eight.
+                            A fizzle of breath escapes her nose. She needs a career. Direction. A plan. She’s been stalling for years.
+                            “Hey,” a man stands at the end of the room, fingers dropped in a thick woollen coat, stubbled smile bashful.
+                            “Can I help?” Sarah weaves towards the front of the room, a fake smile plastered across her sticky, dark red lips, fingers drifting across her apron to remove the cleaning water.
+                            “Are the kitchens closed?” He knocks a dark fringe from molten brown eyes.
+                            “The restaurant is, but we still offer room service.” Another warm smile, this one slightly genuine. Hospitality is kind of their thing at Neptune’s Trident, and an attractive guest makes it all the easier to offer. “I’ll get you a menu.”
+                            She plucks one of the ostentatious leather bound menus from behind the till and flicks it open, holding it out to him like a book opened to her favourite page. His gaze flicks across the aperitifs. The starters. Back to her. Down to the desserts.
+                            """: "the man",
+                            """
+                            The student next to me digs his laptop out of his bag. The fans whirr to life. I shuffle closer. “Can we share?”
+                            He arches an eyebrow, a gesture I am starting to think they teach you as part of creative writing society induction. “I didn’t bring my laptop. Or a pen and paper.”
+                            “You didn’t bring anything to write with to creative writing?” I swallow. I’m starting to understand all the eyebrow raising. He slides his computer between us. “I’ll write one sentence you can write the next.”
+                            He opens up a new document and taps out the first line.
+                            """: "the student",
+                            """
+                            “You like to write?” He quirks a skeptical eyebrow in my direction.
+                            “Yeah. I do. I love writing. It’s my favourite… thing.” I shift the battered copy of War and Peace in my fingertips, brought from the charity shop for 20p this morning.
+                            “What genre?” His blonde eyebrows furrow beneath a thinning hairline.
+                            “Classics. I write classics.” I twist the book in my palm so War and Peace’s shiny, dented cover catches the light. Classics is a genre right? The frown he’s giving me suggests otherwise. I jerk my head towards the seminar room. “I’m going to find a seat.”
+                            """: "the man",
+                            """
+                            There is a rustle in the corner. Cathy freezes. Did she disturb something? It’s like… breathing? Snoring? She drops the box lid and turns around. Dark shapes. Gloomy boxes and the water tank. Is there a pigeon in here? It came from behind the water tank.
+                            Her footsteps crinkle. She lifts her boot. A Twix wrapper. What? Who’s been eating chocolate up here? She shuffles a few steps forward. Another wrapper. An empty coke can. And…
+                            Eyes. Two dark eyes. Curly hair. A pale face. A rank sleeping bag.
+                            Cathy stumbles back. Her palm funds her mouth but the scream tears free anyway. Ricochets across the attic. The figure rises. Grey hoodie. Dark jeans.
+                            A figure. A man. In her attic.
+                            """: "the intruder",
+                            """
+                            When will you arrive? x
+                            Mandy’s message, complete with the mandatory x. Paul taps a quick reply, shouldering his bag and stepping out of the office. I’m on my way. Few mins.
+                            Ok x
+                            He slides my phone into his pocket. Campus is cold and quiet, bathed in the amber glow of street lamps and silenced by secrets. The grass in front of the library. The lit up glass doors and the vacant turnstiles. The empty road and the cement lecture theatres. Bitten with the tang of fear. Swathed by the scent of caution.
+                            He shakes the thought away.
+                            """: "Mandy",
+                            """
+                            “It will be like I never left.” Her mother’s face softens with the pretty lie.
+                            Helena needs to try. She needs to beg her mother to stay. She opens her mouth but the footman steps forward, a smile drawn over kind features. “The car’s here.”
+                            Her mother plucks her bag from the tiled floor, loops the leather over her arm and offers the house one last smile. “I’ll see you soon, darling.”
+                            Helena isn’t sure if she is talking to her or the manor. Wind whips through the doorway, coating the polished wood in an icy spray. It slams shut. The world is trapped outside and her mother with it.
+                            """: "the mother",
+                            """
+                            Helena tiptoed. Cold water sloshed over the rim of the slick glass, onto her fingertips, dropping to the carpet beneath, hidden in the shadows of the stairwell at the end of the corridor.
+                            Bang. Something slammed to the table. “You better tell me or I’ll find out from the accounts.”
+                            “Then wait for the statements.” Her father’s voice was a whip’s snap. He’s always angrier when he’s lost. She’s always cross when she drinks.
+                            “I don’t want to wait for the statements, George,” her mother’s tone turned icy. “I want to know which maid I will have to let go this week. Which part of the house we’ll have to sell.” The glass trembled in Helena’s clammy fingers. Stop. Please stop.
+                            “It’s my house to sell!” A clatter. A pinging. Something shattering.
+                            """: "the father",
+                            """
+                            The air is thick with the smell of soil. The ground is soft beneath them. Light flutters through the twigs, the den just big enough for two nine year olds, shoulder to shoulder. It took them all day to build.
+                            “It’s done.” Helena brushes the splinters from her palms. Wet bark scraped tiny hands.
+                            “It’s missing something.” Henry tugs his backpack from his shoulders. He pulls out a pad of paper and a single charcoal pencil.
+                            “What’s it missing?” His brush strokes are clumsy. An imperfect circle. A too big smile. A lopsided grin. Two figures.
+                            Henry attaches the drawing to an outstretched twig, chest puffed out. “A picture of the owners.”
+                            Helena smiles. Owners. She likes that.
+                            """: "Henry",
+                            """
+                            The room is small. A single bed, a large window and a potted plant stuffed in the corner. All very functional. My aunt is as pale as the grey day outside, eyelids shut, mouth slack. She could be sleeping. Dreaming. My tentative fingers stroke her bare arm. I hope she’s dreaming.
+                            The doctor enters; a chart in one hand, the weight of lives in the other.
+                            “She’s in a coma.” His voice is confident but rueful, face pliant with age and folded in wrinkled creases. His body is thin and tufty hair thinner. “We’re hoping she’ll wake up but there’s no guarantee.”
+                            """: "the doctor",
+                            """
+                            She drops down next to her desk. The first drawer is past papers. Answered and marked, all in her hand. She tosses them in the bin. The next is unloved stationary. Mismatched paper clips, a dusty calculator, an old pair of scissors.
+                            The last is memories.
+                            Her at the leavers ball. Her last physics lesson. Her first week on the ward. Her old school planner.
+                            Her and Russell.
+                            She plucks a photo from the drawer. The last day of school. Wicked summer sun douses the print in sparkling brightness. School blouses are untucked. Vibrant messages are scrawled across the front, crude pictures and teary goodbyes. His arm is slung over her shoulder, tangling in her dark hair.
+                            Tears blur her vision. The picture was taken over a year ago. Before he found someone new. Before he didn’t bother to tell her.
+                            She tears the picture in two.
+                            """: "Russell",
+                            """
+                            “Tash,” her lab partner swans in, a cocky smile and a halo of dark curls. Nat looks up. ‘Tash’ is not her name. ‘Tash’ is what he christened her at the start of term. ‘Tash’ is the name her classmates now use, despite her having been Nat since year seven. Tash is what she answers to.
+                            “Come over tonight.” His warm smile meets her tight one. This year Russell Price started sitting next to her in chemistry. This year he noticed her.
+                            “I… um… can’t. I’m going to Bayford House after school.”
+                            “Bayford House? The old people’s home?”
+                            “Yeah. I volunteer…”
+                            He wrinkles his nose. “Skip it. This will be more fun.”
+                            """: "Russell",
+                            """
+                            “There’s one last thing we should tell you.” His words are slow and serious. Stop the tape. Please, stop the tape. “There was DNA found on Heather’s body. Fingerprints on her shoulder. A hair caught on her clothes. We have been unable to identify whose DNA it is.”
+                            I know. I’ve read the evidence. “We arrested your friend this morning.” My heart lurches in my chest. This, I didn’t know. “She’s being held in custody.”
+                            """: "the detective",
+                            """
+                          I pad into the hallway and press my ear to Nat’s door, holding my breath and listening hard. I’ve done this so many nights before. This is the first time I’m afraid of the woman inside.
+                          Wisps of guttural snores reach my waiting ear. She’s a heavy sleeper. We went camping once and a curious sheep sampled our tent flap. Nat slept through the whole thing.
+                          When I ease the door open a screech fills the sleepy air. I freeze. Snoring. There’s still snoring. The tension slips from my rigid body. Yes MI6, I am available for work.
+                          """: "the housemate"]
+    
+    
     static var characterSituations = [
         "A wizard who's told he's not powerful enough to go to magic school",
         "A snowman stuck in a snow globe",
