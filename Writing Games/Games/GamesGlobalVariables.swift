@@ -10,6 +10,8 @@ import SwiftUI
 
 struct GamesGlobalVariables {
     
+    static var genres = ["Young Adult", "Adult", "Middle Grade", "Fantasy", "Horror", "Magical Realism", "Histroical", "Romance", "Science Fiction", "Memoir", "Dystopian", "Mystery", "Thriller"]
+    
     static var tones = [
         "formal",
         "sarcastic",
