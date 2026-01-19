@@ -17,7 +17,7 @@ struct GamesPage: View {
             ScrollView {
                 VStack(spacing: 8) {
                     Text("Writing Games")
-                    RectangleCTA(title: "Six Word Story", subtitle: "", colour: Color.writingGames, action: {})
+                    RectangleCTA(title: "Six Word Story", colour: Color.writingGames, action: {})
                     HStack {
                         SquareCTA(title: "Prompt", colour: Color.writingGames, icon: "pencil.and.scribble", action: {})
                         SquareCTA(title: "Conflict", colour: Color.writingGames, icon: "figure.climbing", action: {})
@@ -26,7 +26,7 @@ struct GamesPage: View {
                         SquareCTA(title: "Genre Change", colour: Color.writingGames, icon: "microphone.fill", action: {})
                         SquareCTA(title: "POV Switch", colour: Color.writingGames, icon: "person.3.fill", action: {})
                     }
-                    RectangleCTA(title: "Hooky First Sentence", subtitle: "", colour: Color.writingGames, action: {})
+                    RectangleCTA(title: "Hooky First Sentence", colour: Color.writingGames, action: {})
                 }.padding()
             }
             .navigationDestination(for: GamesPageRoute.self) { route in

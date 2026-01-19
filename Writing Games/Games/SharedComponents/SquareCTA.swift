@@ -21,7 +21,7 @@ struct SquareCTA: View {
                 .foregroundColor(Color.white)
             Spacer()
             Text(title)
-                .font(Font.custom("AbrilFatface-Regular", size: 14))
+                .font(Font.custom("AbrilFatface-Regular", size: 18))
                 .foregroundColor(Color.white)
             VStack {
                 EmptyView()
