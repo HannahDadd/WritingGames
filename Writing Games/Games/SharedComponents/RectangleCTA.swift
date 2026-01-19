@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct RectangleCTA: View {
+    let title: String
+    let subtitle: String
+    let colour: Color
     var action: () -> Void
     
     var body: some View {
         ZStack(alignment: .leading) {
             VStack(alignment: .leading) {
-                Text("Practice editing")
+                Text(title)
                     .font(.headline)
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.leading)
                     .lineLimit(2)
                 Spacer()
-                Text("Practice your editing skills on these sentences.")
+                Text(subtitle)
                     .font(.subheadline)
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.leading)
@@ -27,8 +30,9 @@ struct RectangleCTA: View {
             }
             .padding()
         }
-        .frame(height: 140)
+        .frame(height: 100)
         .frame(maxWidth: .infinity)
+        .background(colour)
         .cornerRadius(8)
         .onTapGesture {
             action()

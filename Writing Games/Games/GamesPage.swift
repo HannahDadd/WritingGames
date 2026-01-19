@@ -16,13 +16,17 @@ struct GamesPage: View {
         NavigationStack(path: $navigationManager.path) {
             ScrollView {
                 VStack(spacing: 8) {
-                    PromptsCTA()
-                    VocabCTA(action: {
-                        navigationManager.navigate(to: .vocabGame)
-                    })
-                    EditingGameCTA(action: {
-                        navigationManager.navigate(to: .editingGame)
-                    })
+                    Text("Writing Games")
+                    RectangleCTA(title: "Six Word Story", subtitle: "", colour: Color.writingGames, action: {})
+                    HStack {
+                        SquareCTA(title: "Prompt", colour: Color.writingGames, icon: "pencil.and.scribble", action: {})
+                        SquareCTA(title: "Conflict", colour: Color.writingGames, icon: "figure.climbing", action: {})
+                    }
+                    HStack {
+                        SquareCTA(title: "Genre Change", colour: Color.writingGames, icon: "microphone.fill", action: {})
+                        SquareCTA(title: "POV Switch", colour: Color.writingGames, icon: "person.3.fill", action: {})
+                    }
+                    RectangleCTA(title: "Hooky First Sentence", subtitle: "", colour: Color.writingGames, action: {})
                 }.padding()
             }
             .navigationDestination(for: GamesPageRoute.self) { route in
