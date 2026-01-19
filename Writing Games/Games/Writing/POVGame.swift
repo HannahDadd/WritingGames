@@ -15,7 +15,7 @@ struct POVGame: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                Text("Change the POV of this excerpt to **\(e.1)**")
+                Text("Change the POV of this excerpt to **\(e?.1 ?? "")**")
                 Text(e?.0 ?? "")
                 TextEditor(text: $response)
                     .frame(height: 100, alignment: .leading)
