@@ -29,7 +29,7 @@ struct SquareCTA: View {
             .frame(maxWidth: .infinity)
         }
         .padding()
-        .frame(height: 140)
+        .frame(height: 110)
         .frame(maxWidth: .infinity)
         .background(colour)
         .cornerRadius(8)

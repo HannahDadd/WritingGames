@@ -15,19 +15,41 @@ struct GamesPage: View {
     var body: some View {
         NavigationStack(path: $navigationManager.path) {
             ScrollView {
-                VStack(spacing: 8) {
-                    Text("Writing Games")
-                    RectangleCTA(title: "Six Word Story", colour: Color.writingGames, action: {})
-                    HStack {
-                        SquareCTA(title: "Prompt", colour: Color.writingGames, icon: "pencil.and.scribble", action: {})
-                        SquareCTA(title: "Conflict", colour: Color.writingGames, icon: "figure.climbing", action: {})
+                VStack(spacing: 34) {
+                    HeadlineAndSubtitle(title: "Writing Games", subtitle: "")
+                    VStack(spacing: 8) {
+                        SubTitle(title: "Writing Games")
+                        RectangleCTA(title: "Six Word Story", colour: Color.writingGames, action: {})
+                        HStack {
+                            SquareCTA(title: "Prompt", colour: Color.writingGames, icon: "lightbulb.fill", action: {})
+                            SquareCTA(title: "Conflict", colour: Color.writingGames, icon: "figure.climbing", action: {})
+                        }
+                        HStack {
+                            SquareCTA(title: "Genre Change", colour: Color.writingGames, icon: "microphone.fill", action: {})
+                            SquareCTA(title: "POV Switch", colour: Color.writingGames, icon: "person.3.fill", action: {})
+                        }
+                        RectangleCTA(title: "Hooky First Sentence", colour: Color.writingGames, action: {})
                     }
-                    HStack {
-                        SquareCTA(title: "Genre Change", colour: Color.writingGames, icon: "microphone.fill", action: {})
-                        SquareCTA(title: "POV Switch", colour: Color.writingGames, icon: "person.3.fill", action: {})
+                    VStack(spacing: 8) {
+                        SubTitle(title: "Vocab Games")
+                        HStack {
+                            SquareCTA(title: "Match the Meaning", colour: Color.timedGames, icon: "text.line.magnify", action: {})
+                            SquareCTA(title: "Build a Word", colour: Color.timedGames, icon: "hammer.fill", action: {})
+                        }
                     }
-                    RectangleCTA(title: "Hooky First Sentence", colour: Color.writingGames, action: {})
-                }.padding()
+                    VStack(spacing: 8) {
+                        SubTitle(title: "Editing Games")
+                        HStack {
+                            SquareCTA(title: "Add Voice", colour: Color.editingGames, icon: "message.fill", action: {})
+                            SquareCTA(title: "Grammar", colour: Color.editingGames, icon: "pencil.and.scribble", action: {})
+                        }
+                        HStack {
+                            SquareCTA(title: "Passive to Active", colour: Color.editingGames, icon: "figure.run", action: {})
+                            SquareCTA(title: "Cut the Waffle", colour: Color.editingGames, icon: "character.cursor.ibeam", action: {})
+                        }
+                    }
+                }
+                .padding()
             }
             .navigationDestination(for: GamesPageRoute.self) { route in
                 switch route {
