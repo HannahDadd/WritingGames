@@ -15,7 +15,7 @@ struct RectangleCTA: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(title)
-                .font(Font.custom("AbrilFatface-Regular", size: 24))
+                .font(Font.custom("Bellefair-Regular", size: 14))
                 .foregroundColor(Color.white)
                 .multilineTextAlignment(.leading)
                 .lineLimit(2)
