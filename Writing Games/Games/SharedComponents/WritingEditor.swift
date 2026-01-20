@@ -14,6 +14,7 @@ struct WritingEditor: View {
     var body: some View {
         TextEditor(text: $words)
             .lineSpacing(5)
+            .frame(minHeight: 350)
             .overlay {
                 if words.isEmpty {
                     VStack {

@@ -23,6 +23,7 @@ struct LoadingPage: View {
             Text(title)
                 .font(Font.custom("AbrilFatface-Regular", size: 48))
                 .foregroundColor(Color.black)
+                .multilineTextAlignment(.center)
             Text(subtitle)
                 .font(Font.custom("Bellefair-Regular", size: 24))
                 .foregroundColor(Color.black)

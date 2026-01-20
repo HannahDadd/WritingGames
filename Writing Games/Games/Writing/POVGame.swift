@@ -10,7 +10,6 @@ import SwiftUI
 struct POVGame: View {
     @State var playing = false
     @State var response: String = ""
-    @State private var btnPressed = false
     let e = GamesGlobalVariables.excerts.randomElement()
     
     var body: some View {
@@ -18,17 +17,13 @@ struct POVGame: View {
             LoadingPage(title: GameTypes.povSwitch.getTitle(), subtitle: "Switch up the point of view of this excerpt.", colour: Color.writingGames, icon: GameTypes.povSwitch.getIcon(), action: { playing = true })
         } else {
             ScrollView {
-                VStack(alignment: .leading) {
-                    Text("Change the POV of this excerpt to **\(e?.1 ?? "")**")
-                    Text(e?.0 ?? "")
-                    TextEditor(text: $response)
-                        .frame(height: 100, alignment: .leading)
-                        .cornerRadius(6.0)
-                        .border(Color.gray, width: 1)
-                        .multilineTextAlignment(.leading)
+                VStack(spacing: 18) {
+                    Excerpt(text: e?.0 ?? "")
+                    Text("Rewrite excerpt in the point of view of:")
+                    HighlightedText(colour: Color.writingGames, words: e?.1.uppercased() ?? "")
+                    WritingEditor(words: $response)
                     Spacer()
-                    GameButton(text: btnPressed ? "Congrats!" : "I did the prompt!", action: {
-                        btnPressed = true
+                    GameButton(text: "Share", action: {
                     })
                 }
                 .padding()

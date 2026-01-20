@@ -113,7 +113,7 @@ struct GamesGlobalVariables {
                            “Hey,” Lucy waits outside building 35, hunched beneath a parapet, fingers stuffed in her pockets and backpack loose on her shoulders.
                            “How is it pouring and you still look flawless?” I fold my sodden arms across my chest.
                            “They’ve this fabulous new invention. It’s called the umbrella. You should try it.” She winks. “Ready?”
-                           Not even close.
+                           "Not even close."
                            """: "Lucy",
                             """
                             Celia Brown doesn’t steal for murderers unless she’s desperate.
@@ -148,8 +148,8 @@ struct GamesGlobalVariables {
                             “The linguine is tonight’s special.” Is she flirting, or blabbering? Sarah has never been smooth. She twists her face into what she hopes is a coy smile.
                             “I’ll get that then.” He gives back the menu, gaze still lingering on her lips.
                             “Anything else?”
-                            “How about the gateau, two spoons?” Cheeky. She breathes a laugh and slides the menu back into its holder.
-                            “I’ll get the order to the chef.”
+                            “How about the gateau, two spoons?” he says. 
+                            Cheeky. She breathes a laugh and slides the menu back into its holder. “I’ll get the order to the chef.”
                             """: "the man",
                             """
                             Sarah slaps mucky water across the chipped wooden table and drags the rag over smudged beer rings. A job at the hotel restaurant had seemed great, when she was sixteen and needed the money. It’s feeling a lot less glamorous at twenty eight.
