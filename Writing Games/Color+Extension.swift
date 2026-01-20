@@ -11,4 +11,5 @@ extension Color {
     static let writingGames: Color = .init("CardBlue")
     static let editingGames: Color = .init("CardGreen")
     static let timedGames: Color = .init("CardOrange")
+    static let GetItWriteCTA: Color = .init("CardPurple")
 }

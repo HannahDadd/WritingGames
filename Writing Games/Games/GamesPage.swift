@@ -38,7 +38,7 @@ struct GamesPage: View {
                                 navigationManager.navigate(to: .povSwitch)
                             })
                         }
-                        RectangleCTA(gameType: GameTypes.firstSentence, colour: Color.writingGames, action: {
+                        RectangleCTA(title: GameTypes.firstSentence.getTitle(), colour: Color.writingGames, action: {
                             navigationManager.navigate(to: .firstSentence)
                         })
                     }
@@ -48,7 +48,7 @@ struct GamesPage: View {
                             SquareCTA(gameType: GameTypes.vocabGame, colour: Color.timedGames, action: {
                                 navigationManager.navigate(to: .vocabGame)
                             })
-                            SquareCTA(title: GameTypes.buildAWord, colour: Color.timedGames, action: {
+                            SquareCTA(gameType: GameTypes.buildAWord, colour: Color.timedGames, action: {
                                 navigationManager.navigate(to: .buildAWord)
                             })
                         }

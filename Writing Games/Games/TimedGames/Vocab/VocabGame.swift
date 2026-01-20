@@ -14,8 +14,8 @@ struct VocabGame: View {
     var action: () -> Void
     
     var body: some View {
-        if playing {
-            LoadingPage(title: GameTypes.vocabGame.getTitle(), subtitle: "", colour: Color.timedGames, icon: <#T##String#>, action: <#T##() -> Void#>)
+        if !playing {
+            LoadingPage(title: GameTypes.vocabGame.getTitle(), subtitle: "", colour: Color.timedGames, icon: GameTypes.vocabGame.getIcon(), action: { playing = true })
         } else {
             VStack {
                 VocabQuestion(word: word?.key ?? "", definition: word?.value ?? "", options: fakeWords, nextCard: {
