@@ -17,7 +17,7 @@ struct GrammarGame: View {
     
     var body: some View {
         if !playing {
-            LoadingPage(title: GameTypes.grammar.getTitle(), subtitle: "The grammar in these sentences are all over the place, can you fix them?", colour: Color.timedGames, icon: GameTypes.grammar.getIcon(), action: { playing = true })
+            LoadingPage(title: GameTypes.grammar.getTitle(), subtitle: "The grammar in these sentences are all over the place, can you fix them?", colour: Color.editingGames, icon: GameTypes.grammar.getIcon(), action: { playing = true })
         } else {
             VStack(alignment: .leading, spacing: 24) {
                 Text("Fix the grammar in this sentence:")
@@ -28,7 +28,7 @@ struct GrammarGame: View {
                     .border(Color.gray, width: 1)
                     .multilineTextAlignment(.leading)
                 Spacer()
-                StretchedButton(text: "Done", action: {
+                GameButton(text: "Done", action: {
                     if sentence.1 == response {
                         showCorrect = true
                     } else {

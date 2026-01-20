@@ -15,7 +15,7 @@ struct ConflictGame: View {
     
     var body: some View {
         if !playing {
-            LoadingPage(title: GameTypes.conflict.getTitle(), subtitle: "This character is in a sticky situation, can you get them out of it?", colour: Color.timedGames, icon: GameTypes.conflict.getIcon(), action: { playing = true })
+            LoadingPage(title: GameTypes.conflict.getTitle(), subtitle: "This character is in a sticky situation, can you get them out of it?", colour: Color.writingGames, icon: GameTypes.conflict.getIcon(), action: { playing = true })
         } else {
             VStack(alignment: .leading) {
                 Text("Write the character out of this situation")
@@ -26,7 +26,7 @@ struct ConflictGame: View {
                     .border(Color.gray, width: 1)
                     .multilineTextAlignment(.leading)
                 Spacer()
-                StretchedButton(text: btnPressed ? "Congrats!" : "I did the prompt!", action: {
+                GameButton(text: btnPressed ? "Congrats!" : "I did the prompt!", action: {
                     btnPressed = true
                 })
             }.padding()

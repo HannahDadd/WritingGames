@@ -14,13 +14,13 @@ struct WritingPrompt: View {
     
     var body: some View {
         if !playing {
-            LoadingPage(title: GameTypes.prompt.getTitle(), subtitle: "Feeling inspired? Write a short story from this prompt.", colour: Color.timedGames, icon: GameTypes.prompt.getIcon(), action: { playing = true })
+            LoadingPage(title: GameTypes.prompt.getTitle(), subtitle: "Feeling inspired? Write a short story from this prompt.", colour: Color.writingGames, icon: GameTypes.prompt.getIcon(), action: { playing = true })
         } else {
             VStack(alignment: .leading) {
                 Text(question)
                 Spacer()
                 Text(btnPressed ? "" : "Did you do this prompt? Tell us!")
-                StretchedButton(text: btnPressed ? "Congrats!" : "I did the prompt!", action: {
+                GameButton(text: btnPressed ? "Congrats!" : "I did the prompt!", action: {
                     btnPressed = true
                 })
             }.padding()

@@ -20,7 +20,7 @@ struct SixWordStory: View {
                 .border(Color.gray, width: 1)
                 .multilineTextAlignment(.leading)
             Spacer()
-            StretchedButton(text: btnPressed ? "Congrats!" : "I did the prompt!", action: {
+            GameButton(text: btnPressed ? "Congrats!" : "I did the prompt!", action: {
                 btnPressed = true
             })
         }.padding()

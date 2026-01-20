@@ -16,7 +16,7 @@ struct GenreGame: View {
     
     var body: some View {
         if !playing {
-            LoadingPage(title: GameTypes.genre.getTitle(), subtitle: "Give this excerpt a new genre!", colour: Color.timedGames, icon: GameTypes.genre.getIcon(), action: { playing = true })
+            LoadingPage(title: GameTypes.genre.getTitle(), subtitle: "Give this excerpt a new genre!", colour: Color.writingGames, icon: GameTypes.genre.getIcon(), action: { playing = true })
         } else {
             ScrollView {
                 VStack(alignment: .leading) {
@@ -28,7 +28,7 @@ struct GenreGame: View {
                         .border(Color.gray, width: 1)
                         .multilineTextAlignment(.leading)
                     Spacer()
-                    StretchedButton(text: btnPressed ? "Congrats!" : "I did the prompt!", action: {
+                    GameButton(text: btnPressed ? "Congrats!" : "I did the prompt!", action: {
                         btnPressed = true
                     })
                 }.padding()

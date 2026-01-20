@@ -15,34 +15,25 @@ struct LoadingPage: View {
     var action: () -> Void
     
     var body: some View {
-        VStack {
+        VStack(spacing: 24) {
             Spacer()
             Image(systemName: icon)
-                .font(.system(size: 45))
-                .foregroundColor(Color.white)
+                .font(.system(size: 60))
+                .foregroundColor(Color.black)
             Text(title)
-                .font(Font.custom("AbrilFatface-Regular", size: 24))
-                .foregroundColor(Color.white)
-                .multilineTextAlignment(.leading)
-                .lineLimit(2)
+                .font(Font.custom("AbrilFatface-Regular", size: 48))
+                .foregroundColor(Color.black)
             Text(subtitle)
-                .font(Font.custom("Bellefair-Regular", size: 18))
-                .foregroundColor(Color.white)
-                .multilineTextAlignment(.leading)
-                .lineLimit(2)
+                .font(Font.custom("Bellefair-Regular", size: 24))
+                .foregroundColor(Color.black)
+                .multilineTextAlignment(.center)
             Spacer()
-            StretchedButton(text: "Play", action: {})
+            GameButton(text: "Play", action: {})
             Spacer()
-            VStack {
-                EmptyView()
-            }
-            .frame(maxWidth: .infinity)
         }
         .padding()
-        .frame(height: 60)
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(colour)
-        .cornerRadius(8)
         .onTapGesture {
             action()
         }

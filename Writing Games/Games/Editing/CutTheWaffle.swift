@@ -15,7 +15,7 @@ struct CutTheWaffle: View {
     
     var body: some View {
         if !playing {
-            LoadingPage(title: GameTypes.editingGame.getTitle(), subtitle: "These sentences along, what words can you cut?", colour: Color.timedGames, icon: GameTypes.editingGame.getIcon(), action: { playing = true })
+            LoadingPage(title: GameTypes.editingGame.getTitle(), subtitle: "These sentences along, what words can you cut?", colour: Color.editingGames, icon: GameTypes.editingGame.getIcon(), action: { playing = true })
         } else {
             VStack(alignment: .leading, spacing: 24) {
                 Text("Rewrite the sentence below to practice your editing skills.")
@@ -27,7 +27,7 @@ struct CutTheWaffle: View {
                     .multilineTextAlignment(.leading)
                 Spacer()
                 ShareLink(item: "I got this sentence on the Get It Write app: \(sentence)\nThis is my edit: \(response)", message: Text("Thoughts?"))
-                StretchedButton(text: "Done", action: back)
+                GameButton(text: "Done", action: back)
             }
             .padding()
         }

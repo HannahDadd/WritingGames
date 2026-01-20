@@ -23,7 +23,7 @@ struct VocabGame: View {
                     fakeWords = GamesGlobalVariables.vocabMap.shuffled().prefix(3).compactMap { $0.value }
                 })
                 Spacer()
-                StretchedButton(text: "Done", action: action)
+                GameButton(text: "Done", action: action)
             }
             .padding()
             .navigationTitle("List with Navigation")

@@ -15,7 +15,7 @@ struct POVGame: View {
     
     var body: some View {
         if !playing {
-            LoadingPage(title: GameTypes.povSwitch.getTitle(), subtitle: "Switch up the point of view of this excerpt.", colour: Color.timedGames, icon: GameTypes.povSwitch.getIcon(), action: { playing = true })
+            LoadingPage(title: GameTypes.povSwitch.getTitle(), subtitle: "Switch up the point of view of this excerpt.", colour: Color.writingGames, icon: GameTypes.povSwitch.getIcon(), action: { playing = true })
         } else {
             ScrollView {
                 VStack(alignment: .leading) {
@@ -27,7 +27,7 @@ struct POVGame: View {
                         .border(Color.gray, width: 1)
                         .multilineTextAlignment(.leading)
                     Spacer()
-                    StretchedButton(text: btnPressed ? "Congrats!" : "I did the prompt!", action: {
+                    GameButton(text: btnPressed ? "Congrats!" : "I did the prompt!", action: {
                         btnPressed = true
                     })
                 }.padding()

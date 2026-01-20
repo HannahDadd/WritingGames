@@ -16,7 +16,7 @@ struct AddVoiceGame: View {
     
     var body: some View {
         if !playing {
-            LoadingPage(title: GameTypes.addVoice.getTitle(), subtitle: "Can you give personality to these bland dialogue tags?", colour: Color.timedGames, icon: GameTypes.addVoice.getIcon(), action: { playing = true })
+            LoadingPage(title: GameTypes.addVoice.getTitle(), subtitle: "Can you give personality to these bland dialogue tags?", colour: Color.editingGames, icon: GameTypes.addVoice.getIcon(), action: { playing = true })
         } else {
             VStack(alignment: .leading, spacing: 24) {
                 Text("Rewrite the dialogue below with the following tone **\(tone)**.")
@@ -28,7 +28,7 @@ struct AddVoiceGame: View {
                     .multilineTextAlignment(.leading)
                 Spacer()
                 ShareLink(item: "I got this sentence on the Get It Write app: \(sentence)\nThis is my edit: \(response)", message: Text("Thoughts?"))
-                StretchedButton(text: "Done", action: back)
+                GameButton(text: "Done", action: back)
             }
             .padding()
         }

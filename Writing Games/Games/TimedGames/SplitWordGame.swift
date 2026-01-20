@@ -34,7 +34,7 @@ struct SplitWordGame: View {
                         }
                 }
                 Spacer()
-                StretchedButton(text: "Done", action: action)
+                GameButton(text: "Done", action: action)
             }
             .padding()
         }

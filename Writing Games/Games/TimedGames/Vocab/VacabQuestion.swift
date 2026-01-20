@@ -65,7 +65,7 @@ struct VocabQuestion: View {
                 .foregroundColor(Color.black)
                 .bold()
                 .multilineTextAlignment(.leading)
-            StretchedButton(text: "Try Again", action: onButtonPress)
+            GameButton(text: "Try Again", action: onButtonPress)
         }
         .padding()
         .frame(height: 100)
