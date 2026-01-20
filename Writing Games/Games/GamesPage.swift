@@ -10,7 +10,7 @@ import Combine
 
 struct GamesPage: View {
     @StateObject private var navigationManager = GamesPageNavigationManager()
-    @State var path = NavigationPath([GamesPageRoute.vocabGame])
+    @State var path = NavigationPath([GameTypes.vocabGame])
     
     var body: some View {
         NavigationStack(path: $navigationManager.path) {
@@ -19,36 +19,36 @@ struct GamesPage: View {
                     HeadlineAndSubtitle(title: "Writing Games", subtitle: "Games to keep you on top writing form.")
                     VStack(spacing: 8) {
                         SubTitle(title: "Writing Games")
-                        RectangleCTA(title: "Six Word Story", colour: Color.writingGames, action: {
+                        RectangleCTA(title: GameTypes.sixWordStory.getTitle(), colour: Color.writingGames, action: {
                             navigationManager.navigate(to: .sixWordStory)
                         })
                         HStack {
-                            SquareCTA(title: "Prompt", colour: Color.writingGames, icon: "lightbulb.fill", action: {
+                            SquareCTA(gameType: GameTypes.prompt, colour: Color.writingGames,  action: {
                                 navigationManager.navigate(to: .prompt)
                             })
-                            SquareCTA(title: "Conflict", colour: Color.writingGames, icon: "figure.climbing", action: {
+                            SquareCTA(gameType: GameTypes.conflict, colour: Color.writingGames, action: {
                                 navigationManager.navigate(to: .conflict)
                             })
                         }
                         HStack {
-                            SquareCTA(title: "Genre Change", colour: Color.writingGames, icon: "microphone.fill", action: {
+                            SquareCTA(gameType: GameTypes.genre, colour: Color.writingGames, action: {
                                 navigationManager.navigate(to: .genre)
                             })
-                            SquareCTA(title: "POV Switch", colour: Color.writingGames, icon: "person.3.fill", action: {
+                            SquareCTA(gameType: GameTypes.povSwitch, colour: Color.writingGames, action: {
                                 navigationManager.navigate(to: .povSwitch)
                             })
                         }
-                        RectangleCTA(title: "Hooky First Sentence", colour: Color.writingGames, action: {
+                        RectangleCTA(gameType: GameTypes.firstSentence, colour: Color.writingGames, action: {
                             navigationManager.navigate(to: .firstSentence)
                         })
                     }
                     VStack(spacing: 8) {
                         SubTitle(title: "Vocab Games")
                         HStack {
-                            SquareCTA(title: "Match the Meaning", colour: Color.timedGames, icon: "text.line.magnify", action: {
+                            SquareCTA(gameType: GameTypes.vocabGame, colour: Color.timedGames, action: {
                                 navigationManager.navigate(to: .vocabGame)
                             })
-                            SquareCTA(title: "Build a Word", colour: Color.timedGames, icon: "hammer.fill", action: {
+                            SquareCTA(title: GameTypes.buildAWord, colour: Color.timedGames, action: {
                                 navigationManager.navigate(to: .buildAWord)
                             })
                         }
@@ -56,18 +56,18 @@ struct GamesPage: View {
                     VStack(spacing: 8) {
                         SubTitle(title: "Editing Games")
                         HStack {
-                            SquareCTA(title: "Add Voice", colour: Color.editingGames, icon: "message.fill", action: {
+                            SquareCTA(gameType: GameTypes.addVoice, colour: Color.editingGames, action: {
                                 navigationManager.navigate(to: .addVoice)
                             })
-                            SquareCTA(title: "Grammar", colour: Color.editingGames, icon: "pencil.and.scribble", action: {
+                            SquareCTA(gameType: GameTypes.grammar, colour: Color.editingGames, action: {
                                 navigationManager.navigate(to: .grammar)
                             })
                         }
                         HStack {
-                            SquareCTA(title: "Passive to Active", colour: Color.editingGames, icon: "figure.run", action: {
+                            SquareCTA(gameType: GameTypes.passiveToActive, colour: Color.editingGames, action: {
                                 navigationManager.navigate(to: .passiveToActive)
                             })
-                            SquareCTA(title: "Cut the Waffle", colour: Color.editingGames, icon: "character.cursor.ibeam", action: {
+                            SquareCTA(gameType: GameTypes.editingGame, colour: Color.editingGames, action: {
                                 navigationManager.navigate(to: .editingGame)
                             })
                         }
@@ -75,7 +75,7 @@ struct GamesPage: View {
                 }
                 .padding()
             }
-            .navigationDestination(for: GamesPageRoute.self) { route in
+            .navigationDestination(for: GameTypes.self) { route in
                 switch route {
                 case .vocabGame:
                     VocabGame(action: {
@@ -111,28 +111,10 @@ struct GamesPage: View {
     }
 }
 
-enum GamesPageRoute {
-    
-    case sixWordStory
-    case conflict
-    case genre
-    case povSwitch
-    case prompt
-    case firstSentence
-    
-    case vocabGame
-    case buildAWord
-    
-    case editingGame
-    case addVoice
-    case grammar
-    case passiveToActive
-}
-
 final class GamesPageNavigationManager: ObservableObject {
     @Published var path = NavigationPath()
     
-    func navigate(to route: GamesPageRoute) {
+    func navigate(to route: GameTypes) {
         path.append(route)
     }
     
