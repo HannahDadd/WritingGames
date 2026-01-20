@@ -12,13 +12,13 @@ struct GetItWriteCTA: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("")
-                .font(Font.custom("Bellefair-Regular", size: 18))
+            Text("Writing a full length novel?")
+                .font(Font.custom("AbrilFatface-Regular", size: 24))
                 .foregroundColor(Color.white)
                 .multilineTextAlignment(.leading)
                 .lineLimit(2)
             Spacer()
-            Text("")
+            Text("Download Get it Write to get those words written")
                 .font(Font.custom("Bellefair-Regular", size: 18))
                 .foregroundColor(Color.white)
                 .multilineTextAlignment(.leading)
@@ -33,6 +33,7 @@ struct GetItWriteCTA: View {
         .frame(maxWidth: .infinity)
         .background(Color.GetItWriteCTA)
         .cornerRadius(8)
+        .padding(.top, 24)
         .onTapGesture {
             showingPopover = true
         }

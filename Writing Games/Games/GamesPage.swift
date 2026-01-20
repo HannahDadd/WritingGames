@@ -79,9 +79,7 @@ struct GamesPage: View {
             .navigationDestination(for: GameTypes.self) { route in
                 switch route {
                 case .vocabGame:
-                    VocabGame(action: {
-                        navigationManager.reset()
-                    })
+                    VocabGame()
                 case .editingGame:
                     CutTheWaffle(back: {
                         navigationManager.reset()
