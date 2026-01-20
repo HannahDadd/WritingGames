@@ -10,7 +10,7 @@ import SwiftUI
 struct LivesAndScore: View {
     @Binding var hearts: Int
     @Binding var total: Int
-    @Binding var showEnd: Bool
+    var action: () -> Void
     
     var body: some View {
         HStack {
@@ -22,9 +22,7 @@ struct LivesAndScore: View {
                 }
             } else {
                 Text("")
-                    .onAppear {
-                        showEnd = true
-                    }
+                    .onAppear { action() }
             }
         }
     }

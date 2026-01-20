@@ -10,8 +10,7 @@ import SwiftUI
 struct VocabGame: View {
     @AppStorage(GameTypes.vocabGame.getAppStorageName()) var topScore: Int = 0
     
-    @State var playing = false
-    @State var showEnd = false
+    @State var gameState: GameState = .loading
     @State var hearts = 3
     @State var total = 0
 
@@ -19,16 +18,12 @@ struct VocabGame: View {
     @State var fakeWords = GamesGlobalVariables.vocabMap.shuffled().prefix(3).compactMap { $0.value }
     
     var body: some View {
-        if !playing {
-            LoadingPage(title: GameTypes.vocabGame.getTitle(), subtitle: "Pick the correct meaning of these niche words to improve your vocabulary.", colour: Color.timedGames, icon: GameTypes.vocabGame.getIcon(), action: { playing = true })
-        } else if showEnd {
-            EndPage(subtitle: "You're out of hearts!", colour: Color.timedGames, icon: GameTypes.vocabGame.getIcon(), score: total, bestScore: topScore, action: {
-                showEnd = false
-                playing = true
-            })
-        } else {
+        switch gameState {
+        case .loading:
+            LoadingPage(title: GameTypes.vocabGame.getTitle(), subtitle: "Pick the correct meaning of these niche words to improve your vocabulary.", colour: Color.timedGames, icon: GameTypes.vocabGame.getIcon(), action: { gameState = .playing })
+        case .playing:
             VStack(spacing: 8) {
-                LivesAndScore(hearts: $hearts, total: $total, showEnd: $showEnd)
+                LivesAndScore(hearts: $hearts, total: $total, action: { gameState = .end })
                 Spacer()
                 VocabQuestion(word: word?.key ?? "", definition: word?.value ?? "", options: fakeWords, onCorrect: {
                     total = total + 1
@@ -41,9 +36,28 @@ struct VocabGame: View {
                     hearts = hearts - 1
                 })
                 Spacer()
+                HStack {
+                    Text("Your best score: \(topScore)")
+                        .font(Font.custom("Bellefair-Regular", size: 12))
+                        .foregroundColor(Color.black)
+                        .multilineTextAlignment(.center)
+                    Spacer()
+                }
             }
             .padding()
             .navigationTitle(GameTypes.vocabGame.getTitle())
+        case .end:
+            EndPage(subtitle: "You're out of hearts!", colour: Color.timedGames, icon: GameTypes.vocabGame.getIcon(), score: total, bestScore: topScore, action: {
+                hearts = 3
+                total = 0
+                gameState = .playing
+            })
         }
     }
+}
+
+enum GameState {
+    case loading
+    case playing
+    case end
 }
