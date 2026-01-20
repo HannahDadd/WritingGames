@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct EndPage: View {
-    let title: String
     let subtitle: String
     let colour: Color
     let icon: String
+    let score: Int
+    let bestScore: Int
     var action: () -> Void
     
     var body: some View {
@@ -20,11 +21,19 @@ struct EndPage: View {
             Image(systemName: icon)
                 .font(.system(size: 60))
                 .foregroundColor(Color.black)
-            Text(title)
+            Text("Game over")
                 .font(Font.custom("AbrilFatface-Regular", size: 48))
                 .foregroundColor(Color.black)
                 .multilineTextAlignment(.center)
             Text(subtitle)
+                .font(Font.custom("Bellefair-Regular", size: 20))
+                .foregroundColor(Color.black)
+                .multilineTextAlignment(.center)
+            Text("Score: **\(score)**")
+                .font(Font.custom("Bellefair-Regular", size: 24))
+                .foregroundColor(Color.black)
+                .multilineTextAlignment(.center)
+            Text("Your best score: **\(bestScore)**")
                 .font(Font.custom("Bellefair-Regular", size: 24))
                 .foregroundColor(Color.black)
                 .multilineTextAlignment(.center)

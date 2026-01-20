@@ -10,6 +10,7 @@ import SwiftUI
 struct LivesAndScore: View {
     @Binding var hearts: Int
     @Binding var total: Int
+    @Binding var showEnd: Bool
     
     var body: some View {
         HStack {
@@ -19,6 +20,11 @@ struct LivesAndScore: View {
                 ForEach(0..<hearts, id: \.self) { _ in
                     Image(systemName: "heart.fill")
                 }
+            } else {
+                Text("")
+                    .onAppear {
+                        showEnd = true
+                    }
             }
         }
     }

@@ -79,4 +79,33 @@ enum GameTypes {
             return "figure.run"
         }
     }
+    
+    func getAppStorageName() -> String {
+        switch self {
+        case .sixWordStory:
+            return "SixWordStory"
+        case .conflict:
+            return "ResolveConflict"
+        case .genre:
+            return "GenreMashup"
+        case .povSwitch:
+            return "POVSwitch"
+        case .prompt:
+            return "Prompt"
+        case .firstSentence:
+            return "HookyFirstSentence"
+        case .vocabGame:
+            return "VocabGame"
+        case .buildAWord:
+            return "BuildWord"
+        case .editingGame:
+            return "CutWaffle"
+        case .addVoice:
+            return "AddVoice"
+        case .grammar:
+            return "Grammar"
+        case .passiveToActive:
+            return "PassiveActive"
+        }
+    }
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct VocabGame: View {
+    @AppStorage(GameTypes.vocabGame.getAppStorageName()) var topScore: Int = 0
+    
     @State var playing = false
     @State var showEnd = false
     @State var hearts = 3
@@ -20,13 +22,19 @@ struct VocabGame: View {
         if !playing {
             LoadingPage(title: GameTypes.vocabGame.getTitle(), subtitle: "Pick the correct meaning of these niche words to improve your vocabulary.", colour: Color.timedGames, icon: GameTypes.vocabGame.getIcon(), action: { playing = true })
         } else if showEnd {
-            EndPage(title: GameTypes.vocabGame.getTitle(), subtitle: "You're out of hearts!", colour: Color.timedGames, icon: GameTypes.vocabGame.getIcon(), action: { playing = true })
+            EndPage(subtitle: "You're out of hearts!", colour: Color.timedGames, icon: GameTypes.vocabGame.getIcon(), score: total, bestScore: topScore, action: {
+                showEnd = false
+                playing = true
+            })
         } else {
             VStack(spacing: 8) {
-                LivesAndScore(hearts: $hearts, total: $total)
+                LivesAndScore(hearts: $hearts, total: $total, showEnd: $showEnd)
                 Spacer()
                 VocabQuestion(word: word?.key ?? "", definition: word?.value ?? "", options: fakeWords, onCorrect: {
                     total = total + 1
+                    if total > topScore {
+                        topScore = total
+                    }
                     word = GamesGlobalVariables.vocabMap.shuffled().first
                     fakeWords = GamesGlobalVariables.vocabMap.shuffled().prefix(3).compactMap { $0.value }
                 }, onIncorrect: {
