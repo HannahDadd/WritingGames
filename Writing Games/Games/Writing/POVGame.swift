@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct POVGame: View {
+    @State var playing = false
     @State var response: String = ""
     @State private var btnPressed = false
     let e = GamesGlobalVariables.excerts.randomElement()
-    @State var playing = false
     
     var body: some View {
         if !playing {
@@ -30,7 +30,9 @@ struct POVGame: View {
                     GameButton(text: btnPressed ? "Congrats!" : "I did the prompt!", action: {
                         btnPressed = true
                     })
-                }.padding()
+                }
+                .padding()
+                .navigationTitle(GameTypes.povSwitch.getTitle())
             }
         }
     }

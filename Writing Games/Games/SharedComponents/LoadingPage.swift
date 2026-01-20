@@ -28,14 +28,11 @@ struct LoadingPage: View {
                 .foregroundColor(Color.black)
                 .multilineTextAlignment(.center)
             Spacer()
-            GameButton(text: "Play", action: {})
+            GameButton(text: "Play", action: action)
             Spacer()
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(colour)
-        .onTapGesture {
-            action()
-        }
     }
 }

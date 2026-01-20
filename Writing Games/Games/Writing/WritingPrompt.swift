@@ -8,22 +8,25 @@
 import SwiftUI
 
 struct WritingPrompt: View {
+    @State var playing = false
+    @State var words = ""
     @State private var btnPressed = false
     let question = GamesGlobalVariables.writingPrompts.randomElement() ?? ""
-    @State var playing = false
     
     var body: some View {
         if !playing {
             LoadingPage(title: GameTypes.prompt.getTitle(), subtitle: "Feeling inspired? Write a short story from this prompt.", colour: Color.writingGames, icon: GameTypes.prompt.getIcon(), action: { playing = true })
         } else {
-            VStack(alignment: .leading) {
-                Text(question)
+            VStack(spacing: 8) {
+                HighlightedText(colour: Color.writingGames, words: question)
+                WritingEditor(words: $words)
                 Spacer()
-                Text(btnPressed ? "" : "Did you do this prompt? Tell us!")
-                GameButton(text: btnPressed ? "Congrats!" : "I did the prompt!", action: {
+                GameButton(text: "Share", action: {
                     btnPressed = true
                 })
-            }.padding()
+            }
+            .padding()
+            .navigationTitle(GameTypes.prompt.getTitle())
         }
     }
 }
