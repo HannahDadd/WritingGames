@@ -15,7 +15,7 @@ struct POVGame: View {
     
     var body: some View {
         if !playing {
-            LoadingPage(title: GameTypes.povSwitch.getTitle(), subtitle: "", colour: Color.timedGames, icon: GameTypes.povSwitch.getIcon(), action: { playing = true })
+            LoadingPage(title: GameTypes.povSwitch.getTitle(), subtitle: "Switch up the point of view of this excerpt.", colour: Color.timedGames, icon: GameTypes.povSwitch.getIcon(), action: { playing = true })
         } else {
             ScrollView {
                 VStack(alignment: .leading) {

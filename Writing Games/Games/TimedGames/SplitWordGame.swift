@@ -15,7 +15,7 @@ struct SplitWordGame: View {
     
     var body: some View {
         if !playing {
-            LoadingPage(title: GameTypes.buildAWord.getTitle(), subtitle: "", colour: Color.timedGames, icon: GameTypes.buildAWord.getIcon(), action: { playing = true })
+            LoadingPage(title: GameTypes.buildAWord.getTitle(), subtitle: "Build a word from its meaning to improve your vocabulary.", colour: Color.timedGames, icon: GameTypes.buildAWord.getIcon(), action: { playing = true })
         } else {
             VStack {
                 Spacer()

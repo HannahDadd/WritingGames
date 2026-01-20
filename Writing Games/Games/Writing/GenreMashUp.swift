@@ -16,7 +16,7 @@ struct GenreGame: View {
     
     var body: some View {
         if !playing {
-            LoadingPage(title: GameTypes.genre.getTitle(), subtitle: "", colour: Color.timedGames, icon: GameTypes.genre.getIcon(), action: { playing = true })
+            LoadingPage(title: GameTypes.genre.getTitle(), subtitle: "Give this excerpt a new genre!", colour: Color.timedGames, icon: GameTypes.genre.getIcon(), action: { playing = true })
         } else {
             ScrollView {
                 VStack(alignment: .leading) {

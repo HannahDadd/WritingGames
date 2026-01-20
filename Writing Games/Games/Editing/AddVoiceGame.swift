@@ -16,7 +16,7 @@ struct AddVoiceGame: View {
     
     var body: some View {
         if !playing {
-            LoadingPage(title: GameTypes.addVoice.getTitle(), subtitle: "", colour: Color.timedGames, icon: GameTypes.addVoice.getIcon(), action: { playing = true })
+            LoadingPage(title: GameTypes.addVoice.getTitle(), subtitle: "Can you give personality to these bland dialogue tags?", colour: Color.timedGames, icon: GameTypes.addVoice.getIcon(), action: { playing = true })
         } else {
             VStack(alignment: .leading, spacing: 24) {
                 Text("Rewrite the dialogue below with the following tone **\(tone)**.")

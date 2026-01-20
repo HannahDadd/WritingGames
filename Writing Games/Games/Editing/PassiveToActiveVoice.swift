@@ -17,7 +17,7 @@ struct PassiveToActiveGame: View {
     
     var body: some View {
         if !playing {
-            LoadingPage(title: GameTypes.passiveToActive.getTitle(), subtitle: "", colour: Color.timedGames, icon: GameTypes.passiveToActive.getIcon(), action: { playing = true })
+            LoadingPage(title: GameTypes.passiveToActive.getTitle(), subtitle: "Can you bring theses sentences from the passive to the active voice?", colour: Color.timedGames, icon: GameTypes.passiveToActive.getIcon(), action: { playing = true })
         } else {
             VStack(alignment: .leading, spacing: 24) {
                 Text("Turn this passive sentence to the active voice:")

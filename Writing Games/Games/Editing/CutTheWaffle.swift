@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EditingQuestion: View {
+struct CutTheWaffle: View {
     @State var response: String = ""
     let sentence = GamesGlobalVariables.badSentences.randomElement()!
     var back: () -> Void
@@ -15,7 +15,7 @@ struct EditingQuestion: View {
     
     var body: some View {
         if !playing {
-            LoadingPage(title: GameTypes.editingGame.getTitle(), subtitle: "", colour: Color.timedGames, icon: GameTypes.editingGame.getIcon(), action: { playing = true })
+            LoadingPage(title: GameTypes.editingGame.getTitle(), subtitle: "These sentences along, what words can you cut?", colour: Color.timedGames, icon: GameTypes.editingGame.getIcon(), action: { playing = true })
         } else {
             VStack(alignment: .leading, spacing: 24) {
                 Text("Rewrite the sentence below to practice your editing skills.")

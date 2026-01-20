@@ -14,7 +14,7 @@ struct WritingPrompt: View {
     
     var body: some View {
         if !playing {
-            LoadingPage(title: GameTypes.prompt.getTitle(), subtitle: "", colour: Color.timedGames, icon: GameTypes.prompt.getIcon(), action: { playing = true })
+            LoadingPage(title: GameTypes.prompt.getTitle(), subtitle: "Feeling inspired? Write a short story from this prompt.", colour: Color.timedGames, icon: GameTypes.prompt.getIcon(), action: { playing = true })
         } else {
             VStack(alignment: .leading) {
                 Text(question)

@@ -83,7 +83,7 @@ struct GamesPage: View {
                         navigationManager.reset()
                     })
                 case .editingGame:
-                    EditingQuestion(back: {
+                    CutTheWaffle(back: {
                         navigationManager.reset()
                     })
                 case .sixWordStory:
