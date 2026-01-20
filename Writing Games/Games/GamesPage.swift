@@ -72,6 +72,7 @@ struct GamesPage: View {
                             })
                         }
                     }
+                    GetItWriteCTA()
                 }
                 .padding()
             }
@@ -94,7 +95,7 @@ struct GamesPage: View {
                 case .povSwitch:
                     POVGame()
                 case .prompt:
-                    ExpandedPrompt()
+                    WritingPrompt()
                 case .firstSentence:
                     HookyFirstSentenceGame()
                 case .buildAWord:

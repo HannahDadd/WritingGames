@@ -12,22 +12,27 @@ struct GenreGame: View {
     @State private var btnPressed = false
     let e = GamesGlobalVariables.excerts.randomElement()
     let genre = GamesGlobalVariables.grammarSentences.shuffled().first!
+    @State var playing = false
     
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                Text("Change the genre of this excerpt to **\(genre)**")
-                Text(e?.0 ?? "")
-                TextEditor(text: $response)
-                    .frame(height: 100, alignment: .leading)
-                    .cornerRadius(6.0)
-                    .border(Color.gray, width: 1)
-                    .multilineTextAlignment(.leading)
-                Spacer()
-                StretchedButton(text: btnPressed ? "Congrats!" : "I did the prompt!", action: {
-                    btnPressed = true
-                })
-            }.padding()
+        if !playing {
+            LoadingPage(title: GameTypes.genre.getTitle(), subtitle: "", colour: Color.timedGames, icon: GameTypes.genre.getIcon(), action: { playing = true })
+        } else {
+            ScrollView {
+                VStack(alignment: .leading) {
+                    Text("Change the genre of this excerpt to **\(genre)**")
+                    Text(e?.0 ?? "")
+                    TextEditor(text: $response)
+                        .frame(height: 100, alignment: .leading)
+                        .cornerRadius(6.0)
+                        .border(Color.gray, width: 1)
+                        .multilineTextAlignment(.leading)
+                    Spacer()
+                    StretchedButton(text: btnPressed ? "Congrats!" : "I did the prompt!", action: {
+                        btnPressed = true
+                    })
+                }.padding()
+            }
         }
     }
 }

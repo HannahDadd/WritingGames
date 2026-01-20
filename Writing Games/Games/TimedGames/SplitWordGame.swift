@@ -11,28 +11,33 @@ struct SplitWordGame: View {
     @State var word = GamesGlobalVariables.vocabMap.shuffled().first
     @State var chosenWords: [String] = []
     var action: () -> Void
+    @State var playing = false
     
     var body: some View {
-        VStack {
-            Spacer()
-            Text(word?.1 ?? "")
-            Spacer()
-            ForEach(chosenWords, id: \.self) { w in
-                Text(w)
-                    .clipShape(Capsule())
+        if !playing {
+            LoadingPage(title: GameTypes.buildAWord.getTitle(), subtitle: "", colour: Color.timedGames, icon: GameTypes.buildAWord.getIcon(), action: { playing = true })
+        } else {
+            VStack {
+                Spacer()
+                Text(word?.1 ?? "")
+                Spacer()
+                ForEach(chosenWords, id: \.self) { w in
+                    Text(w)
+                        .clipShape(Capsule())
+                }
+                Spacer()
+                ForEach(splitIntoThreeCharacterStrings(word?.0 ?? ""), id: \.self) { word in
+                    Text(word)
+                        .clipShape(Capsule())
+                        .onTapGesture {
+                            chosenWords.append(word)
+                        }
+                }
+                Spacer()
+                StretchedButton(text: "Done", action: action)
             }
-            Spacer()
-            ForEach(splitIntoThreeCharacterStrings(word?.0 ?? ""), id: \.self) { word in
-                Text(word)
-                    .clipShape(Capsule())
-                    .onTapGesture {
-                        chosenWords.append(word)
-                    }
-            }
-            Spacer()
-            StretchedButton(text: "Done", action: action)
+            .padding()
         }
-        .padding()
     }
     
     func splitIntoThreeCharacterStrings(_ word: String) -> [String] {
