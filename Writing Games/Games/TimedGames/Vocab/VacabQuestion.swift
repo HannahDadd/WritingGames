@@ -65,20 +65,4 @@ struct VocabQuestion: View {
             }
         }
     }
-    
-    func popUp(text: String, onButtonPress: @escaping () -> Void) -> some View {
-        VStack(alignment: .leading) {
-            Text(text)
-                .font(.headline)
-                .foregroundColor(Color.black)
-                .bold()
-                .multilineTextAlignment(.leading)
-            GameButton(text: "Try Again", action: onButtonPress)
-        }
-        .padding()
-        .frame(height: 100)
-        .frame(maxWidth: .infinity)
-        .background(Color.white)
-        .cornerRadius(8)
-    }
 }

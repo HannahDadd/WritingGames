@@ -26,6 +26,15 @@ struct SplitWordGame: View {
                 SplitWordQuestionPane(word: word, action: {
                     word = GamesGlobalVariables.vocabMap.shuffled().first
                     return SplitWordGame.splitIntoThreeCharacterStrings(word?.0 ?? "")
+                }, onCorrect: {
+                    total = total + 1
+                    if total > topScore {
+                        topScore = total
+                    }
+//                    word = GamesGlobalVariables.vocabMap.shuffled().first
+//                    fakeWords = GamesGlobalVariables.vocabMap.shuffled().prefix(3).compactMap { $0.value }
+                }, onIncorrect: {
+                    hearts = hearts - 1
                 })
                 Spacer()
                 HStack {
