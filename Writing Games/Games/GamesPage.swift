@@ -97,7 +97,7 @@ struct GamesPage: View {
                 case .firstSentence:
                     HookyFirstSentenceGame()
                 case .buildAWord:
-                    SplitWordGame(action: {})
+                    SplitWordGame()
                 case .addVoice:
                     AddVoiceGame(back: {})
                 case .grammar:
