@@ -12,17 +12,15 @@ struct SplitWordQuestionPane: View {
     @State private var showCorrect = false
     @State var chosenWords: [String] = []
     @State var splitWords: [String]
-    
-    let word: [String: String].Element?
-    let action: () -> [String]
+    @State var word: [String: String].Element?
     
     let onCorrect: () -> Void
     let onIncorrect: () -> Void
     
-    init(word: [String : String].Element?, action: @escaping () -> [String], onCorrect: @escaping () -> Void, onIncorrect: @escaping () -> Void) {
-        self.word = word
-        self.action = action
-        self.splitWords = SplitWordGame.splitIntoThreeCharacterStrings(word?.0 ?? "")
+    init(onCorrect: @escaping () -> Void, onIncorrect: @escaping () -> Void) {
+        let startingWord = GamesGlobalVariables.vocabMap.shuffled().first
+        self.splitWords = SplitWordQuestionPane.splitIntoThreeCharacterStrings(startingWord?.0 ?? "")
+        self.word = startingWord
         self.onCorrect = onCorrect
         self.onIncorrect = onIncorrect
     }
@@ -33,7 +31,7 @@ struct SplitWordQuestionPane: View {
             Text(word?.1 ?? "")
                 .multilineTextAlignment(.center)
             Spacer()
-            HStack(spacing: 4) {
+            HStack(spacing: 2) {
                 ForEach(chosenWords, id: \.self) { w in
                     Text(w)
                         .onTapGesture {
@@ -67,17 +65,35 @@ struct SplitWordQuestionPane: View {
             })
         }
         .padding()
-        .alert("Not quite! Try again", isPresented: $showError) {
+        .alert("Not quite! It was \(word?.0 ?? "")", isPresented: $showError) {
             Button("Close", role: .cancel) {
                 onIncorrect()
+                word = GamesGlobalVariables.vocabMap.shuffled().first
+                chosenWords = []
+                splitWords = SplitWordQuestionPane.splitIntoThreeCharacterStrings(word?.0 ?? "")
             }
         }
         .alert("You got it!", isPresented: $showCorrect) {
             Button("Close", role: .cancel) {
                 onCorrect()
+                word = GamesGlobalVariables.vocabMap.shuffled().first
                 chosenWords = []
-                splitWords = action()
+                splitWords = SplitWordQuestionPane.splitIntoThreeCharacterStrings(word?.0 ?? "")
             }
         }
+    }
+    
+    static func splitIntoThreeCharacterStrings(_ word: String) -> [String] {
+        var result: [String] = []
+        var currentIndex = word.startIndex
+
+        while currentIndex < word.endIndex {
+            let nextIndex = word.index(currentIndex, offsetBy: 3, limitedBy: word.endIndex) ?? word.endIndex
+            result.append(String(word[currentIndex..<nextIndex]))
+            currentIndex = nextIndex
+        }
+        result = result.shuffled()
+
+        return result
     }
 }
