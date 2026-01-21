@@ -9,11 +9,11 @@ import SwiftUI
 
 struct SplitWordQuestionPane: View {
     let word: [String: String].Element?
-    var action: () -> Void
+    var action: () -> [String]
     @State var chosenWords: [String] = []
     @State var splitWords: [String]
     
-    init(word: [String : String].Element?, action: @escaping () -> Void, splitWords: [String]) {
+    init(word: [String : String].Element?, action: @escaping () -> [String], splitWords: [String]) {
         self.word = word
         self.action = action
         self.splitWords = splitWords
@@ -23,6 +23,7 @@ struct SplitWordQuestionPane: View {
         VStack {
             Spacer()
             Text(word?.1 ?? "")
+                .multilineTextAlignment(.center)
             Spacer()
             HStack {
                 ForEach(chosenWords, id: \.self) { w in
@@ -52,7 +53,10 @@ struct SplitWordQuestionPane: View {
                 }
             }
             Spacer()
-            GameButton(text: "Done", action: action)
+            GameButton(text: "Done", action: {
+                chosenWords = []
+                splitWords = action()
+            })
         }
         .padding()
     }
