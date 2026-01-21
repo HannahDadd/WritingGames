@@ -55,9 +55,3 @@ struct VocabGame: View {
         }
     }
 }
-
-enum GameState {
-    case loading
-    case playing
-    case end
-}
