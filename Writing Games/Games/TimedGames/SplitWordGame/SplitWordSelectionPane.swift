@@ -13,10 +13,10 @@ struct SplitWordQuestionPane: View {
     @State var chosenWords: [String] = []
     @State var splitWords: [String]
     
-    init(word: [String : String].Element?, action: @escaping () -> [String], splitWords: [String]) {
+    init(word: [String : String].Element?, action: @escaping () -> [String]) {
         self.word = word
         self.action = action
-        self.splitWords = splitWords
+        self.splitWords = SplitWordGame.splitIntoThreeCharacterStrings(word?.0 ?? "")
     }
     
     var body: some View {
