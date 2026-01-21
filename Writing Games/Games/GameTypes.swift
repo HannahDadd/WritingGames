@@ -45,7 +45,7 @@ enum GameTypes {
         case .addVoice:
             return "Add Voice"
         case .grammar:
-            return "Grammar Gammbit"
+            return "Grammar Nerd"
         case .passiveToActive:
             return "Passive to Active"
         }

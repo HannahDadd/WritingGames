@@ -43,7 +43,6 @@ struct EndPage: View {
                     .multilineTextAlignment(.center)
                 Text("Your best score: **\(bestScore)**")
                     .font(Font.custom("Bellefair-Regular", size: 20))
-                    .foregroundColor(Color.black)
                     .multilineTextAlignment(.center)
             }
             Spacer()

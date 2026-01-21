@@ -9,9 +9,10 @@ import SwiftUI
 
 struct CutTheWaffle: View {
     @State var response: String = ""
+    @State var playing = false
+
     let sentence = GamesGlobalVariables.badSentences.randomElement()!
     var back: () -> Void
-    @State var playing = false
     
     var body: some View {
         if !playing {
