@@ -11,9 +11,8 @@ struct AddVoiceGame: View {
     @State var response: String = ""
     @State var playing = false
 
-    let sentence = GamesGlobalVariables.dialogue.randomElement()!
-    let tone = GamesGlobalVariables.tones.randomElement()!
-    var back: () -> Void
+    @State var sentence = GamesGlobalVariables.dialogue.randomElement()!
+    @State var tone = GamesGlobalVariables.tones.randomElement()!
     
     var body: some View {
         if !playing {
@@ -29,7 +28,10 @@ struct AddVoiceGame: View {
                 HighlightedTextEdit(response: $response, colour: Color.editingGames)
                 Spacer()
                 ShareLink(item: "I got this sentence on the Get It Write app: \(sentence)\nThis is my edit: \(response)", message: Text("Thoughts?"))
-                GameButton(text: "Done", action: back)
+                GameButton(text: "Next", action: {
+                    sentence = GamesGlobalVariables.dialogue.randomElement()!
+                    tone = GamesGlobalVariables.tones.randomElement()!
+                })
             }
             .padding()
             .navigationTitle(GameTypes.addVoice.getTitle())

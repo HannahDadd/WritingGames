@@ -101,9 +101,9 @@ struct GamesPage: View {
                 case .addVoice:
                     AddVoiceGame(back: {})
                 case .grammar:
-                    GrammarGame(back: {})
+                    GrammarGame()
                 case .passiveToActive:
-                    PassiveToActiveGame(back: {})
+                    PassiveToActiveGame()
                 }
             }
         }

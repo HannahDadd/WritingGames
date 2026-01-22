@@ -26,16 +26,25 @@ struct HighlightedText: View {
 struct HighlightedTextEdit: View {
     @Binding var response: String
     let colour: Color
+    let placeholder = "Write answer here"
     
     var body: some View {
         TextEditor(text: $response)
             .font(Font.custom("Bellefair-Regular", size: 18))
             .multilineTextAlignment(.center)
             .padding()
-            .frame(height: 200)
+            .frame(height: 100)
             .overlay(
-                RoundedRectangle(cornerRadius: 16)
-                    .stroke(colour, lineWidth: 4)
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(colour, lineWidth: 2)
             )
+            .overlay {
+                if response.isEmpty {
+                    Text(placeholder)
+                        .font(Font.custom("Bellefair-Regular", size: 18))
+                        .padding()
+                        .allowsHitTesting(false)
+                }
+            }
     }
 }

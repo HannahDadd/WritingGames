@@ -1,18 +1,18 @@
 //
-//  GrammarGame.swift
+//  PassiveToActiveQuestionPane.swift
 //  Writing Games
 //
-//  Created by Hannah Dadd on 16/01/2026.
+//  Created by Hannah Dadd on 22/01/2026.
 //
 
 import SwiftUI
 
-struct GrammarGameQuestionPane: View {
+struct PassiveToActiveQuestionPane: View {
     @State private var showError = false
     @State private var showCorrect = false
     @State var response: String = ""
     
-    let sentence = GamesGlobalVariables.grammarSentences.shuffled().first!
+    let sentence = GamesGlobalVariables.passiveToActiveMap.shuffled().first!
     
     let onCorrect: () -> Void
     let onIncorrect: () -> Void

@@ -409,7 +409,6 @@ struct GamesGlobalVariables {
         "The answer is no!": "The answer is no.",
         "Before sunrise we waited": "Before sunrise, we waited.",
         "Whose book is this": "Whose book is this?",
-        "I finished it already!": "I finished it already.",
         "If you want we can stay": "If you want, we can stay.",
         "That was unexpected wasnt it": "That was unexpected, wasn't it?",
         "She don’t like going outside much." : "She doesn’t like going outside much.",
