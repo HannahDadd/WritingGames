@@ -17,6 +17,7 @@ struct GamesPage: View {
             ScrollView {
                 VStack(spacing: 34) {
                     HeadlineAndSubtitle(title: "Writing Games", subtitle: "Games to keep you on top writing form.")
+                    HighScorePromo()
                     VStack(spacing: 8) {
                         SubTitle(title: "Writing Games")
                         RectangleCTA(title: GameTypes.sixWordStory.getTitle(), colour: Color.writingGames, action: {
@@ -99,7 +100,7 @@ struct GamesPage: View {
                 case .buildAWord:
                     SplitWordGame()
                 case .addVoice:
-                    AddVoiceGame(back: {})
+                    AddVoiceGame()
                 case .grammar:
                     GrammarGame()
                 case .passiveToActive:
