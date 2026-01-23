@@ -20,9 +20,8 @@ struct WritingSection: View {
                 List(stories, id: \.self) { story in
                     NavigationLink(destination: {
                         ScrollView {
-                            VStack {
+                            VStack(spacing: 24) {
                                 Text(story)
-                                Spacer()
                                 GameButton(text: deleted ? "Deleted" : "Delete", action: {
                                     if !deleted {
                                         var items = UserDefaults.standard.array(forKey: gameType.getAppStorageName()) as? [String] ?? []
