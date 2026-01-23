@@ -17,7 +17,6 @@ struct SixWordStory: View {
             HighlightedTextEdit(response: $response, colour: Color.writingGames)
             Spacer()
             ShareAndSaveWriting(saveText: response, shareText: "My six word story: \(response)", appStorageKey: GameTypes.sixWordStory.getAppStorageName())
-            Spacer()
         }
         .padding()
         .navigationTitle(GameTypes.sixWordStory.getTitle())

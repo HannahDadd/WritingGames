@@ -82,9 +82,7 @@ struct GamesPage: View {
                 case .vocabGame:
                     VocabGame()
                 case .editingGame:
-                    CutTheWaffle(back: {
-                        navigationManager.reset()
-                    })
+                    CutTheWaffle()
                 case .sixWordStory:
                     SixWordStory()
                 case .conflict:

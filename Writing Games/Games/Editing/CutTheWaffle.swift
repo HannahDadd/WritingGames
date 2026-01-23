@@ -10,27 +10,23 @@ import SwiftUI
 struct CutTheWaffle: View {
     @State var response: String = ""
     @State var playing = false
+    @State var sentence = GamesGlobalVariables.badSentences.randomElement()!
 
-    let sentence = GamesGlobalVariables.badSentences.randomElement()!
-    var back: () -> Void
-    
     var body: some View {
         if !playing {
             LoadingPage(title: GameTypes.editingGame.getTitle(), subtitle: "These sentences along, what words can you cut?", colour: Color.editingGames, icon: GameTypes.editingGame.getIcon(), action: { playing = true })
         } else {
-            VStack(alignment: .leading, spacing: 24) {
-                Text("Rewrite the sentence below to practice your editing skills.")
-                Text(sentence).bold()
-                TextEditor(text: $response)
-                    .frame(height: 100, alignment: .leading)
-                    .cornerRadius(6.0)
-                    .border(Color.gray, width: 1)
-                    .multilineTextAlignment(.leading)
+            VStack(spacing: 24) {
                 Spacer()
-                ShareLink(item: "I got this sentence on the Get It Write app: \(sentence)\nThis is my edit: \(response)", message: Text("Thoughts?"))
-                GameButton(text: "Done", action: back)
+                HighlightedText(colour: Color.editingGames, words: sentence)
+                HighlightedTextEdit(response: $response, colour: Color.editingGames)
+                Spacer()
+                GameButton(text: "Next", action: {
+                    sentence = GamesGlobalVariables.badSentences.randomElement()!
+                })
             }
             .padding()
+            .navigationTitle(GameTypes.editingGame.getTitle())
         }
     }
 }

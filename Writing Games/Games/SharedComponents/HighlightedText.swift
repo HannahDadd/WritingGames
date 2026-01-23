@@ -13,13 +13,11 @@ struct HighlightedText: View {
     
     var body: some View {
         Text(words)
-            .font(Font.custom("Bellefair-Regular", size: 18))
+            .foregroundStyle(.white)
             .multilineTextAlignment(.center)
             .padding()
-            .overlay(
-                RoundedRectangle(cornerRadius: 16)
-                    .stroke(colour, lineWidth: 4)
-            )
+            .background(colour)
+            .cornerRadius(8)
     }
 }
 

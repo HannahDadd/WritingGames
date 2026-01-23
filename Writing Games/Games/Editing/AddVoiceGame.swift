@@ -27,7 +27,6 @@ struct AddVoiceGame: View {
                 Text("Write in the tone: **\(tone)**")
                 HighlightedTextEdit(response: $response, colour: Color.editingGames)
                 Spacer()
-                ShareLink(item: "I got this sentence on the Get It Write app: \(sentence)\nThis is my edit: \(response)", message: Text("Thoughts?"))
                 GameButton(text: "Next", action: {
                     sentence = GamesGlobalVariables.dialogue.randomElement()!
                     tone = GamesGlobalVariables.tones.randomElement()!

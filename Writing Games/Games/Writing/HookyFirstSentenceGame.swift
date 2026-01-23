@@ -17,7 +17,6 @@ struct HookyFirstSentenceGame: View {
             HighlightedTextEdit(response: $response, colour: Color.writingGames)
             Spacer()
             ShareAndSaveWriting(saveText: response, shareText: "My hooky first sentence: \(response)", appStorageKey: GameTypes.firstSentence.getAppStorageName())
-            Spacer()
         }
         .padding()
         .navigationTitle(GameTypes.firstSentence.getTitle())
