@@ -9,6 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        GamesPage()
+        TabView {
+            GamesPage()
+                .tabItem {
+                    Image(systemName: "gamecontroller.fill")
+                }
+            
+            SavedWriting()
+                .tabItem {
+                    Image(systemName: "list.bullet")
+                }
+        }
     }
 }

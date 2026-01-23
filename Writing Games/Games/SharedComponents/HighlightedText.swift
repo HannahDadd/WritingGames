@@ -26,7 +26,7 @@ struct HighlightedText: View {
 struct HighlightedTextEdit: View {
     @Binding var response: String
     let colour: Color
-    let placeholder = "Write answer here"
+    let placeholder = ""
     
     var body: some View {
         TextEditor(text: $response)

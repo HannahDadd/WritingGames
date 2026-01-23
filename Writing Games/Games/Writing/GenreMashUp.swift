@@ -11,7 +11,7 @@ struct GenreGame: View {
     @State var playing = false
     @State var response: String = ""
     
-    let e = GamesGlobalVariables.excerts.randomElement()
+    let excerpt = GamesGlobalVariables.excerts.randomElement()
     let genre = GamesGlobalVariables.genres.shuffled().first
     
     var body: some View {
@@ -20,13 +20,12 @@ struct GenreGame: View {
         } else {
             ScrollView {
                 VStack(spacing: 18) {
-                    Excerpt(text: e?.0 ?? "")
+                    Excerpt(text: excerpt?.0 ?? "")
                     Text("Rewrite excerpt in the genre of:")
                     HighlightedText(colour: Color.writingGames, words: genre ?? "")
                     WritingEditor(words: $response)
                     Spacer()
-                    GameButton(text: "Share", action: {
-                    })
+                    ShareAndSaveWriting(saveText: response, shareText: "I rewrote this excerpt \(excerpt?.0 ?? "") \nIn the genre of \(genre ?? ""): \(response)", appStorageKey: GameTypes.genre.getAppStorageName())
                 }
                 .padding()
                 .navigationTitle(GameTypes.genre.getTitle())

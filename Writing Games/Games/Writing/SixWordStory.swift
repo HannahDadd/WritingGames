@@ -16,8 +16,7 @@ struct SixWordStory: View {
             Spacer()
             HighlightedTextEdit(response: $response, colour: Color.writingGames)
             Spacer()
-            GameButton(text: "Share", action: {
-            })
+            ShareAndSaveWriting(saveText: response, shareText: "My six word story: \(response)", appStorageKey: GameTypes.sixWordStory.getAppStorageName())
             Spacer()
         }
         .padding()
