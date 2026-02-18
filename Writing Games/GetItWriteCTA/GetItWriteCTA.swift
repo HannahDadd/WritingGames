@@ -38,9 +38,7 @@ struct GetItWriteCTA: View {
             showingPopover = true
         }
         .popover(isPresented: $showingPopover) {
-            Text("Your content here")
-                .font(.headline)
-                .padding()
+            GetItWritePromo()
         }
     }
 }
