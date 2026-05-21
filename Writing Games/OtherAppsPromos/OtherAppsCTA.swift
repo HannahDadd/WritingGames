@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GetItWriteCTA: View {
+struct OtherAppsCTA: View {
     @State private var showingPopover = false
     
     var body: some View {
